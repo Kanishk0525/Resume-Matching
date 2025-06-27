@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Apr 21 22:13:01 2017
 
-@author: binoy
-"""
 from bs4 import BeautifulSoup
 import json
 import urllib

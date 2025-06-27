@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun May 07 02:20:45 2017
-
-@author: binoy
-"""
-
 import pandas as pd
 from gensim.summarization import keywords
 import matplotlib.pyplot as plt
@@ -25,8 +18,8 @@ model.build_vocab(docs)
 
 for epoch in range(10):
     model.train(docs)
-    model.alpha -= 0.002  # decrease the learning rate`
-    model.min_alpha = model.alpha  # fix the learning rate, no decay
+    model.alpha -= 0.002  
+    model.min_alpha = model.alpha  
     
 with open('resumeconverted.txt','r') as f:
     resume = f.read()
