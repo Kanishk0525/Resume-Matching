@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Apr 21 16:53:42 2017
+Created on  may 21  2025
 
-@author: binoy
+@author: kanishk
 """
 from time import sleep
 from selenium import webdriver
@@ -13,7 +13,6 @@ from selenium.common.exceptions import TimeoutException
 import time
 import json
 from bs4 import BeautifulSoup
-
 driver = webdriver.Firefox(executable_path=r'C:\Tools\geckodriver-v0.16.0-win64\geckodriver.exe')
 #driver.get('http://inventwithpython.com')
 
@@ -38,7 +37,7 @@ def geturl(driver):
         
         for m in main:
             url.add('https://www.glassdoor.com{}'.format(m.find('a')['href']))
-            print len(url)
+            print(len(url))
         
     #    print url
         next_element = soup1.find("li",{"class":"next"})
@@ -55,4 +54,5 @@ def geturl(driver):
 x =openbrowser(key = 'data analytics intern')
 with open('url.json','w') as f:
     json.dump(geturl(driver),f, indent = 4)
+
 
